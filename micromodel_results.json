@@ -1,0 +1,724 @@
+{
+  "config": {
+    "embedding_model": "text-embedding-3-small",
+    "llm_model": "gpt-4o-mini",
+    "confidence_threshold": 0.08
+  },
+  "summary": {
+    "total": 30,
+    "micro_handled": 9,
+    "llm_fallback": 21,
+    "llm_agreed": 12,
+    "llm_disagreed": 9,
+    "total_latency": 19.38,
+    "avg_micro_latency": 0.16,
+    "avg_llm_latency": 0.86
+  },
+  "results": [
+    {
+      "input": "Subreddit: r/london\nTitle: Best pizza in Soho?\nBody: Want proper Neapolitan pizz",
+      "category": "FOOD_AND_DRINKS",
+      "handled_by": "LLM",
+      "micro": {
+        "category": "FOOD_AND_DRINKS",
+        "status": "UNSURE",
+        "best_score": 0.7417,
+        "gap": 0.0706,
+        "all_scores": {
+          "FOOD_AND_DRINKS": 0.7417,
+          "PLACES": 0.6711,
+          "UNCATEGORIZED": 0.6632,
+          "ACTIVITIES": 0.6341
+        },
+        "latency": 0.59
+      },
+      "llm": {
+        "category": "FOOD_AND_DRINKS",
+        "confidence": 95,
+        "latency": 0.69,
+        "tokens": 164
+      },
+      "latency": 1.28
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: Best Sunday roast under \u00a320\nBody: Looking for a solid",
+      "category": "FOOD_AND_DRINKS",
+      "handled_by": "MICRO",
+      "micro": {
+        "category": "FOOD_AND_DRINKS",
+        "status": "OK",
+        "best_score": 0.8134,
+        "gap": 0.1381,
+        "all_scores": {
+          "FOOD_AND_DRINKS": 0.8134,
+          "PLACES": 0.6753,
+          "UNCATEGORIZED": 0.6664,
+          "ACTIVITIES": 0.6648
+        },
+        "latency": 0.15
+      },
+      "llm": null,
+      "latency": 0.15
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: Underrated fish and chips?\nBody: Where do locals actu",
+      "category": "FOOD_AND_DRINKS",
+      "handled_by": "MICRO",
+      "micro": {
+        "category": "FOOD_AND_DRINKS",
+        "status": "OK",
+        "best_score": 0.8075,
+        "gap": 0.084,
+        "all_scores": {
+          "FOOD_AND_DRINKS": 0.8075,
+          "UNCATEGORIZED": 0.7234,
+          "PLACES": 0.7139,
+          "ACTIVITIES": 0.6428
+        },
+        "latency": 0.18
+      },
+      "llm": null,
+      "latency": 0.18
+    },
+    {
+      "input": "Subreddit: r/LondonSocialClub\nTitle: [03/05/26] Pub quiz @ The Lamb, Bloomsbury\n",
+      "category": "ACTIVITIES",
+      "handled_by": "MICRO",
+      "micro": {
+        "category": "ACTIVITIES",
+        "status": "OK",
+        "best_score": 0.7586,
+        "gap": 0.093,
+        "all_scores": {
+          "ACTIVITIES": 0.7586,
+          "FOOD_AND_DRINKS": 0.6655,
+          "UNCATEGORIZED": 0.5855,
+          "PLACES": 0.5782
+        },
+        "latency": 0.18
+      },
+      "llm": null,
+      "latency": 0.18
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: London Marathon 2026\nBody: Record breaking marathon i",
+      "category": "ACTIVITIES",
+      "handled_by": "LLM",
+      "micro": {
+        "category": "ACTIVITIES",
+        "status": "UNSURE",
+        "best_score": 0.7591,
+        "gap": 0.058,
+        "all_scores": {
+          "ACTIVITIES": 0.7591,
+          "UNCATEGORIZED": 0.701,
+          "PLACES": 0.6733,
+          "FOOD_AND_DRINKS": 0.6194
+        },
+        "latency": 0.19
+      },
+      "llm": {
+        "category": "ACTIVITIES",
+        "confidence": 85,
+        "latency": 0.65,
+        "tokens": 158
+      },
+      "latency": 0.84
+    },
+    {
+      "input": "Subreddit: r/LondonSocialClub\nTitle: [10/05/26] 5-a-side football @ Paddington R",
+      "category": "ACTIVITIES",
+      "handled_by": "MICRO",
+      "micro": {
+        "category": "ACTIVITIES",
+        "status": "OK",
+        "best_score": 0.7689,
+        "gap": 0.1174,
+        "all_scores": {
+          "ACTIVITIES": 0.7689,
+          "FOOD_AND_DRINKS": 0.6514,
+          "UNCATEGORIZED": 0.6073,
+          "PLACES": 0.6045
+        },
+        "latency": 0.19
+      },
+      "llm": null,
+      "latency": 0.19
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: Hampstead Heath in autumn\nBody: The views from Parlia",
+      "category": "PLACES",
+      "handled_by": "LLM",
+      "micro": {
+        "category": "PLACES",
+        "status": "UNSURE",
+        "best_score": 0.7939,
+        "gap": 0.0592,
+        "all_scores": {
+          "PLACES": 0.7939,
+          "UNCATEGORIZED": 0.7347,
+          "FOOD_AND_DRINKS": 0.6897,
+          "ACTIVITIES": 0.6611
+        },
+        "latency": 0.25
+      },
+      "llm": {
+        "category": "PLACES",
+        "confidence": 90,
+        "latency": 0.53,
+        "tokens": 162
+      },
+      "latency": 0.78
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: Tate Modern vs Tate Britain - which one?\nBody: Only h",
+      "category": "PLACES",
+      "handled_by": "MICRO",
+      "micro": {
+        "category": "PLACES",
+        "status": "OK",
+        "best_score": 0.7744,
+        "gap": 0.0871,
+        "all_scores": {
+          "PLACES": 0.7744,
+          "FOOD_AND_DRINKS": 0.6873,
+          "UNCATEGORIZED": 0.6873,
+          "ACTIVITIES": 0.6564
+        },
+        "latency": 0.15
+      },
+      "llm": null,
+      "latency": 0.15
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: Postman's Park - the memorial wall\nBody: Found this i",
+      "category": "PLACES",
+      "handled_by": "MICRO",
+      "micro": {
+        "category": "PLACES",
+        "status": "OK",
+        "best_score": 0.8143,
+        "gap": 0.0874,
+        "all_scores": {
+          "PLACES": 0.8143,
+          "UNCATEGORIZED": 0.7269,
+          "ACTIVITIES": 0.6625,
+          "FOOD_AND_DRINKS": 0.6561
+        },
+        "latency": 0.14
+      },
+      "llm": null,
+      "latency": 0.14
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: Cost of living reality check\nBody: Just got my counci",
+      "category": "UNCATEGORIZED",
+      "handled_by": "MICRO",
+      "micro": {
+        "category": "UNCATEGORIZED",
+        "status": "OK",
+        "best_score": 0.7456,
+        "gap": 0.1024,
+        "all_scores": {
+          "UNCATEGORIZED": 0.7456,
+          "FOOD_AND_DRINKS": 0.6431,
+          "PLACES": 0.6381,
+          "ACTIVITIES": 0.5995
+        },
+        "latency": 0.15
+      },
+      "llm": null,
+      "latency": 0.15
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: Pub with board games?\nBody: Want somewhere to play ga",
+      "category": "FOOD_AND_DRINKS",
+      "handled_by": "LLM",
+      "micro": {
+        "category": "FOOD_AND_DRINKS",
+        "status": "UNSURE",
+        "best_score": 0.7575,
+        "gap": 0.0375,
+        "all_scores": {
+          "FOOD_AND_DRINKS": 0.7575,
+          "ACTIVITIES": 0.72,
+          "PLACES": 0.6935,
+          "UNCATEGORIZED": 0.6602
+        },
+        "latency": 0.14
+      },
+      "llm": {
+        "category": "FOOD_AND_DRINKS",
+        "confidence": 90,
+        "latency": 0.71,
+        "tokens": 163
+      },
+      "latency": 0.85
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: Street food at Victoria Park\nBody: The Sunday market ",
+      "category": "FOOD_AND_DRINKS",
+      "handled_by": "LLM",
+      "micro": {
+        "category": "FOOD_AND_DRINKS",
+        "status": "UNSURE",
+        "best_score": 0.7507,
+        "gap": 0.0321,
+        "all_scores": {
+          "FOOD_AND_DRINKS": 0.7507,
+          "PLACES": 0.7186,
+          "UNCATEGORIZED": 0.7099,
+          "ACTIVITIES": 0.6754
+        },
+        "latency": 0.14
+      },
+      "llm": {
+        "category": "FOOD_AND_DRINKS",
+        "confidence": 90,
+        "latency": 0.6,
+        "tokens": 163
+      },
+      "latency": 0.74
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: Brewery tour with live music\nBody: This place does to",
+      "category": "ACTIVITIES",
+      "handled_by": "LLM",
+      "micro": {
+        "category": "FOOD_AND_DRINKS",
+        "status": "UNSURE",
+        "best_score": 0.7588,
+        "gap": 0.0068,
+        "all_scores": {
+          "FOOD_AND_DRINKS": 0.7588,
+          "ACTIVITIES": 0.752,
+          "PLACES": 0.733,
+          "UNCATEGORIZED": 0.6858
+        },
+        "latency": 0.15
+      },
+      "llm": {
+        "category": "ACTIVITIES",
+        "confidence": 90,
+        "latency": 0.67,
+        "tokens": 166
+      },
+      "latency": 0.82
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: Rooftop cinema and cocktails in Peckham\nBody: They sh",
+      "category": "ACTIVITIES",
+      "handled_by": "LLM",
+      "micro": {
+        "category": "FOOD_AND_DRINKS",
+        "status": "UNSURE",
+        "best_score": 0.766,
+        "gap": 0.0369,
+        "all_scores": {
+          "FOOD_AND_DRINKS": 0.766,
+          "PLACES": 0.7292,
+          "ACTIVITIES": 0.7016,
+          "UNCATEGORIZED": 0.6953
+        },
+        "latency": 0.22
+      },
+      "llm": {
+        "category": "ACTIVITIES",
+        "confidence": 85,
+        "latency": 0.64,
+        "tokens": 166
+      },
+      "latency": 0.86
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: Walking tour of old pubs\nBody: Did a tour of historic",
+      "category": "ACTIVITIES",
+      "handled_by": "LLM",
+      "micro": {
+        "category": "PLACES",
+        "status": "UNSURE",
+        "best_score": 0.7529,
+        "gap": 0.0161,
+        "all_scores": {
+          "PLACES": 0.7529,
+          "FOOD_AND_DRINKS": 0.7367,
+          "UNCATEGORIZED": 0.7,
+          "ACTIVITIES": 0.6804
+        },
+        "latency": 0.18
+      },
+      "llm": {
+        "category": "ACTIVITIES",
+        "confidence": 90,
+        "latency": 0.54,
+        "tokens": 168
+      },
+      "latency": 0.72
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: Yoga in the park\nBody: Free yoga sessions at Regent's",
+      "category": "ACTIVITIES",
+      "handled_by": "LLM",
+      "micro": {
+        "category": "PLACES",
+        "status": "UNSURE",
+        "best_score": 0.7297,
+        "gap": 0.0226,
+        "all_scores": {
+          "PLACES": 0.7297,
+          "ACTIVITIES": 0.707,
+          "FOOD_AND_DRINKS": 0.6879,
+          "UNCATEGORIZED": 0.6688
+        },
+        "latency": 0.15
+      },
+      "llm": {
+        "category": "ACTIVITIES",
+        "confidence": 90,
+        "latency": 0.62,
+        "tokens": 160
+      },
+      "latency": 0.77
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: Jazz bars in Soho?\nBody: Looking for proper live jazz",
+      "category": "FOOD_AND_DRINKS",
+      "handled_by": "MICRO",
+      "micro": {
+        "category": "FOOD_AND_DRINKS",
+        "status": "OK",
+        "best_score": 0.8004,
+        "gap": 0.0941,
+        "all_scores": {
+          "FOOD_AND_DRINKS": 0.8004,
+          "PLACES": 0.7063,
+          "ACTIVITIES": 0.7017,
+          "UNCATEGORIZED": 0.6468
+        },
+        "latency": 0.14
+      },
+      "llm": null,
+      "latency": 0.14
+    },
+    {
+      "input": "Subreddit: r/LondonSocialClub\nTitle: [01/05/26] V&A late night opening\nBody: Lat",
+      "category": "ACTIVITIES",
+      "handled_by": "LLM",
+      "micro": {
+        "category": "ACTIVITIES",
+        "status": "UNSURE",
+        "best_score": 0.7816,
+        "gap": 0.0475,
+        "all_scores": {
+          "ACTIVITIES": 0.7816,
+          "FOOD_AND_DRINKS": 0.7341,
+          "PLACES": 0.6794,
+          "UNCATEGORIZED": 0.6624
+        },
+        "latency": 0.26
+      },
+      "llm": {
+        "category": "ACTIVITIES",
+        "confidence": 90,
+        "latency": 0.63,
+        "tokens": 173
+      },
+      "latency": 0.89
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: Open mic night at a cafe\nBody: This cafe does poetry ",
+      "category": "ACTIVITIES",
+      "handled_by": "LLM",
+      "micro": {
+        "category": "FOOD_AND_DRINKS",
+        "status": "UNSURE",
+        "best_score": 0.7528,
+        "gap": 0.0343,
+        "all_scores": {
+          "FOOD_AND_DRINKS": 0.7528,
+          "ACTIVITIES": 0.7185,
+          "PLACES": 0.7113,
+          "UNCATEGORIZED": 0.6851
+        },
+        "latency": 0.14
+      },
+      "llm": {
+        "category": "ACTIVITIES",
+        "confidence": 85,
+        "latency": 1.01,
+        "tokens": 162
+      },
+      "latency": 1.15
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: Regent's Canal walk ending at a pub\nBody: Want to wal",
+      "category": "ACTIVITIES",
+      "handled_by": "LLM",
+      "micro": {
+        "category": "PLACES",
+        "status": "UNSURE",
+        "best_score": 0.77,
+        "gap": 0.0356,
+        "all_scores": {
+          "PLACES": 0.77,
+          "FOOD_AND_DRINKS": 0.7344,
+          "ACTIVITIES": 0.7245,
+          "UNCATEGORIZED": 0.703
+        },
+        "latency": 0.18
+      },
+      "llm": {
+        "category": "ACTIVITIES",
+        "confidence": 85,
+        "latency": 0.59,
+        "tokens": 168
+      },
+      "latency": 0.77
+    },
+    {
+      "input": "asdkjh askjdh 2k3j4h london food maybe???",
+      "category": "FOOD_AND_DRINKS",
+      "handled_by": "LLM",
+      "micro": {
+        "category": "FOOD_AND_DRINKS",
+        "status": "UNSURE",
+        "best_score": 0.4772,
+        "gap": 0.0448,
+        "all_scores": {
+          "FOOD_AND_DRINKS": 0.4772,
+          "ACTIVITIES": 0.4324,
+          "UNCATEGORIZED": 0.426,
+          "PLACES": 0.3885
+        },
+        "latency": 0.15
+      },
+      "llm": {
+        "category": "FOOD_AND_DRINKS",
+        "confidence": 70,
+        "latency": 0.69,
+        "tokens": 150
+      },
+      "latency": 0.84
+    },
+    {
+      "input": "london",
+      "category": "UNCATEGORIZED",
+      "handled_by": "LLM",
+      "micro": {
+        "category": "UNCATEGORIZED",
+        "status": "UNSURE",
+        "best_score": 0.4726,
+        "gap": 0.0034,
+        "all_scores": {
+          "UNCATEGORIZED": 0.4726,
+          "ACTIVITIES": 0.4692,
+          "FOOD_AND_DRINKS": 0.4653,
+          "PLACES": 0.4502
+        },
+        "latency": 0.15
+      },
+      "llm": {
+        "category": "UNCATEGORIZED",
+        "confidence": 50,
+        "latency": 0.66,
+        "tokens": 132
+      },
+      "latency": 0.81
+    },
+    {
+      "input": "buy cheap viagra online best prices london pharmacy",
+      "category": "UNCATEGORIZED",
+      "handled_by": "LLM",
+      "micro": {
+        "category": "FOOD_AND_DRINKS",
+        "status": "UNSURE",
+        "best_score": 0.3503,
+        "gap": 0.0507,
+        "all_scores": {
+          "FOOD_AND_DRINKS": 0.3503,
+          "ACTIVITIES": 0.2996,
+          "PLACES": 0.2996,
+          "UNCATEGORIZED": 0.2882
+        },
+        "latency": 0.14
+      },
+      "llm": {
+        "category": "UNCATEGORIZED",
+        "confidence": 85,
+        "latency": 0.58,
+        "tokens": 138
+      },
+      "latency": 0.72
+    },
+    {
+      "input": "Subreddit: r/cats\nTitle: My cat knocked over the Christmas tree\nBody: Third year",
+      "category": "UNCATEGORIZED",
+      "handled_by": "LLM",
+      "micro": {
+        "category": "UNCATEGORIZED",
+        "status": "UNSURE",
+        "best_score": 0.4721,
+        "gap": 0.0666,
+        "all_scores": {
+          "UNCATEGORIZED": 0.4721,
+          "PLACES": 0.4055,
+          "FOOD_AND_DRINKS": 0.3703,
+          "ACTIVITIES": 0.369
+        },
+        "latency": 0.23
+      },
+      "llm": {
+        "category": "UNCATEGORIZED",
+        "confidence": 95,
+        "latency": 0.83,
+        "tokens": 159
+      },
+      "latency": 1.06
+    },
+    {
+      "input": "Title: \nBody: \nFlair: ",
+      "category": "UNCATEGORIZED",
+      "handled_by": "LLM",
+      "micro": {
+        "category": "UNCATEGORIZED",
+        "status": "UNSURE",
+        "best_score": 0.451,
+        "gap": 0.0011,
+        "all_scores": {
+          "UNCATEGORIZED": 0.451,
+          "ACTIVITIES": 0.4499,
+          "PLACES": 0.4411,
+          "FOOD_AND_DRINKS": 0.4368
+        },
+        "latency": 0.18
+      },
+      "llm": {
+        "category": "UNCATEGORIZED",
+        "confidence": 100,
+        "latency": 0.67,
+        "tokens": 140
+      },
+      "latency": 0.85
+    },
+    {
+      "input": "\ud83d\udd25\ud83d\udd25\ud83d\udd25 BEST DEALS 50% OFF click here now!!!",
+      "category": "UNCATEGORIZED",
+      "handled_by": "LLM",
+      "micro": {
+        "category": "ACTIVITIES",
+        "status": "UNSURE",
+        "best_score": 0.1859,
+        "gap": 0.005,
+        "all_scores": {
+          "ACTIVITIES": 0.1859,
+          "FOOD_AND_DRINKS": 0.1809,
+          "UNCATEGORIZED": 0.1506,
+          "PLACES": 0.1487
+        },
+        "latency": 0.15
+      },
+      "llm": {
+        "category": "UNCATEGORIZED",
+        "confidence": 90,
+        "latency": 0.64,
+        "tokens": 144
+      },
+      "latency": 0.79
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: Moving from NYC\nBody: Where should I live, eat, and w",
+      "category": "UNCATEGORIZED",
+      "handled_by": "LLM",
+      "micro": {
+        "category": "FOOD_AND_DRINKS",
+        "status": "UNSURE",
+        "best_score": 0.7757,
+        "gap": 0.0172,
+        "all_scores": {
+          "FOOD_AND_DRINKS": 0.7757,
+          "PLACES": 0.7585,
+          "UNCATEGORIZED": 0.7543,
+          "ACTIVITIES": 0.7217
+        },
+        "latency": 0.12
+      },
+      "llm": {
+        "category": "UNCATEGORIZED",
+        "confidence": 75,
+        "latency": 0.79,
+        "tokens": 164
+      },
+      "latency": 0.91
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: yes\nBody: no\nFlair: None",
+      "category": "UNCATEGORIZED",
+      "handled_by": "LLM",
+      "micro": {
+        "category": "UNCATEGORIZED",
+        "status": "UNSURE",
+        "best_score": 0.7902,
+        "gap": 0.0226,
+        "all_scores": {
+          "UNCATEGORIZED": 0.7902,
+          "PLACES": 0.7676,
+          "FOOD_AND_DRINKS": 0.7519,
+          "ACTIVITIES": 0.7244
+        },
+        "latency": 0.15
+      },
+      "llm": {
+        "category": "UNCATEGORIZED",
+        "confidence": 95,
+        "latency": 0.63,
+        "tokens": 149
+      },
+      "latency": 0.78
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: Meilleurs restaurants fran\u00e7ais \u00e0 Londres?\nBody: Je ch",
+      "category": "FOOD_AND_DRINKS",
+      "handled_by": "MICRO",
+      "micro": {
+        "category": "FOOD_AND_DRINKS",
+        "status": "OK",
+        "best_score": 0.7377,
+        "gap": 0.109,
+        "all_scores": {
+          "FOOD_AND_DRINKS": 0.7377,
+          "PLACES": 0.6288,
+          "ACTIVITIES": 0.6021,
+          "UNCATEGORIZED": 0.5914
+        },
+        "latency": 0.14
+      },
+      "llm": null,
+      "latency": 0.14
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: \u041b\u0443\u0447\u0448\u0438\u0435 \u043f\u0430\u0440\u043a\u0438 \u0432 \u041b\u043e\u043d\u0434\u043e\u043d\u0435?\nBody: Looking for nice parks ",
+      "category": "PLACES",
+      "handled_by": "LLM",
+      "micro": {
+        "category": "PLACES",
+        "status": "UNSURE",
+        "best_score": 0.8124,
+        "gap": 0.0611,
+        "all_scores": {
+          "PLACES": 0.8124,
+          "FOOD_AND_DRINKS": 0.7513,
+          "UNCATEGORIZED": 0.7096,
+          "ACTIVITIES": 0.6923
+        },
+        "latency": 0.15
+      },
+      "llm": {
+        "category": "PLACES",
+        "confidence": 90,
+        "latency": 0.58,
+        "tokens": 160
+      },
+      "latency": 0.73
+    }
+  ]
+}
