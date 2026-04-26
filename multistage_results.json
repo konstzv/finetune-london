@@ -1,0 +1,414 @@
+{
+  "summary": {
+    "monolithic": {
+      "calls_per_request": 1,
+      "total_tokens": 2483,
+      "total_latency": 11.53,
+      "valid_results": 7,
+      "total_issues": 1
+    },
+    "multistage": {
+      "calls_per_request": 3,
+      "total_tokens": 6287,
+      "total_latency": 29.39,
+      "valid_results": 8,
+      "total_issues": 0
+    }
+  },
+  "results": [
+    {
+      "label": "Clean: pizza in Soho",
+      "input": "Subreddit: r/london\nTitle: Best pizza in Soho?\nBody: Want proper Neapolitan pizza, not Dominos. Some",
+      "monolithic": {
+        "result": {
+          "category": "FOOD_AND_DRINKS",
+          "neighborhood": "SOHO",
+          "price_range": "MID",
+          "best_for": "COUPLES",
+          "summary": "For authentic Neapolitan pizza in Soho, check out a sit-down restaurant where you can enjoy a glass of wine with your meal."
+        },
+        "latency": 2.42,
+        "tokens": 309,
+        "calls": 1,
+        "issues": []
+      },
+      "multistage": {
+        "result": {
+          "category": "FOOD_AND_DRINKS",
+          "neighborhood": "SOHO",
+          "price_range": "UNKNOWN",
+          "best_for": "ANYONE",
+          "summary": "For authentic Neapolitan pizza in Soho, check out local favorites that offer a sit-down experience with a great selection of wine. Perfect for anyone craving a true taste of Italy!"
+        },
+        "stages": {
+          "normalize": {
+            "title": "Best pizza in Soho",
+            "body": "Want proper Neapolitan pizza, not Dominos. Somewhere sit-down with wine.",
+            "subreddit": "london",
+            "has_date": false,
+            "has_location": true,
+            "language": "en"
+          },
+          "classify": {
+            "category": "FOOD_AND_DRINKS",
+            "neighborhood": "SOHO",
+            "price_range": "UNKNOWN",
+            "best_for": "ANYONE"
+          },
+          "summarize": {
+            "summary": "For authentic Neapolitan pizza in Soho, check out local favorites that offer a sit-down experience with a great selection of wine. Perfect for anyone craving a true taste of Italy!"
+          }
+        },
+        "latency": 4.34,
+        "tokens": 768,
+        "calls": 3,
+        "issues": []
+      }
+    },
+    {
+      "label": "Clean: pub quiz",
+      "input": "Subreddit: r/LondonSocialClub\nTitle: [03/05/26] Pub quiz @ The Lamb, Bloomsbury\nBody: Running our we",
+      "monolithic": {
+        "result": {
+          "category": "ACTIVITIES",
+          "neighborhood": "BLOOMSBURY",
+          "price_range": "FREE",
+          "best_for": "FRIENDS",
+          "summary": "Join the weekly pub quiz at The Lamb in Bloomsbury for a fun evening with friends. No booking is needed and entry is free!"
+        },
+        "latency": 1.66,
+        "tokens": 336,
+        "calls": 1,
+        "issues": []
+      },
+      "multistage": {
+        "result": {
+          "category": "ACTIVITIES",
+          "neighborhood": "BLOOMSBURY",
+          "price_range": "FREE",
+          "best_for": "ANYONE",
+          "summary": "Join the weekly pub quiz at The Lamb in Bloomsbury, where teams of up to 6 can compete for fun starting at 7:30pm. No booking is required and entry is free, making it a great evening activity for everyone."
+        },
+        "stages": {
+          "normalize": {
+            "title": "Pub quiz The Lamb Bloomsbury",
+            "body": "Running our weekly pub quiz again. Teams of up to 6, starts 7:30pm. No booking needed. Free entry.",
+            "subreddit": "LondonSocialClub",
+            "has_date": true,
+            "has_location": true,
+            "language": "en"
+          },
+          "classify": {
+            "category": "ACTIVITIES",
+            "neighborhood": "BLOOMSBURY",
+            "price_range": "FREE",
+            "best_for": "ANYONE"
+          },
+          "summarize": {
+            "summary": "Join the weekly pub quiz at The Lamb in Bloomsbury, where teams of up to 6 can compete for fun starting at 7:30pm. No booking is required and entry is free, making it a great evening activity for everyone."
+          }
+        },
+        "latency": 3.43,
+        "tokens": 863,
+        "calls": 3,
+        "issues": []
+      }
+    },
+    {
+      "label": "Clean: park visit",
+      "input": "Subreddit: r/london\nTitle: Hampstead Heath in autumn\nBody: The views from Parliament Hill are incred",
+      "monolithic": {
+        "result": {
+          "category": "ACTIVITIES",
+          "neighborhood": "HAMPSTEAD",
+          "price_range": "FREE",
+          "best_for": "COUPLES",
+          "summary": "Hampstead Heath offers stunning views from Parliament Hill, making it a perfect spot for a romantic weekend walk in autumn."
+        },
+        "latency": 1.26,
+        "tokens": 314,
+        "calls": 1,
+        "issues": [
+          "bad neighborhood: HAMPSTEAD"
+        ]
+      },
+      "multistage": {
+        "result": {
+          "category": "PLACES",
+          "neighborhood": "UNKNOWN",
+          "price_range": "FREE",
+          "best_for": "COUPLES",
+          "summary": "Enjoy stunning views from Parliament Hill at Hampstead Heath this autumn, making it a perfect spot for a romantic weekend walk with your partner."
+        },
+        "stages": {
+          "normalize": {
+            "title": "Hampstead Heath in autumn",
+            "body": "The views from Parliament Hill are incredible this time of year. Went with my partner and it was perfect for a weekend walk.",
+            "subreddit": "london",
+            "has_date": true,
+            "has_location": true,
+            "language": "en"
+          },
+          "classify": {
+            "category": "PLACES",
+            "neighborhood": "UNKNOWN",
+            "price_range": "FREE",
+            "best_for": "COUPLES"
+          },
+          "summarize": {
+            "summary": "Enjoy stunning views from Parliament Hill at Hampstead Heath this autumn, making it a perfect spot for a romantic weekend walk with your partner."
+          }
+        },
+        "latency": 3.34,
+        "tokens": 788,
+        "calls": 3,
+        "issues": []
+      }
+    },
+    {
+      "label": "Borderline: brewery + music",
+      "input": "Subreddit: r/london\nTitle: Brewery tour with live music in Bermondsey\nBody: This place does tours of",
+      "monolithic": {
+        "result": {
+          "category": "ACTIVITIES",
+          "neighborhood": "BERMONDSEY",
+          "price_range": "MID",
+          "best_for": "FRIENDS",
+          "summary": "Enjoy a brewery tour in Bermondsey for \u00a315, followed by live music in the taproom. It's a fantastic option for a fun night out with friends."
+        },
+        "latency": 1.22,
+        "tokens": 331,
+        "calls": 1,
+        "issues": []
+      },
+      "multistage": {
+        "result": {
+          "category": "ACTIVITIES",
+          "neighborhood": "BERMONDSEY",
+          "price_range": "MID",
+          "best_for": "FRIENDS",
+          "summary": "Enjoy a fun brewery tour in Bermondsey for \u00a315, followed by live music in the taproom\u2014perfect for a group night out with friends."
+        },
+        "stages": {
+          "normalize": {
+            "title": "Brewery tour with live music in Bermondsey",
+            "body": "This place does tours of their brewery for \u00a315 and has a band playing in the taproom after. Great for a group night out.",
+            "subreddit": "london",
+            "has_date": false,
+            "has_location": true,
+            "language": "en"
+          },
+          "classify": {
+            "category": "ACTIVITIES",
+            "neighborhood": "BERMONDSEY",
+            "price_range": "MID",
+            "best_for": "FRIENDS"
+          },
+          "summarize": {
+            "summary": "Enjoy a fun brewery tour in Bermondsey for \u00a315, followed by live music in the taproom\u2014perfect for a group night out with friends."
+          }
+        },
+        "latency": 3.73,
+        "tokens": 835,
+        "calls": 3,
+        "issues": []
+      }
+    },
+    {
+      "label": "Borderline: rooftop cinema",
+      "input": "Subreddit: r/london\nTitle: Rooftop cinema and cocktails in Peckham\nBody: They show old movies on a r",
+      "monolithic": {
+        "result": {
+          "category": "ACTIVITIES",
+          "neighborhood": "PECKHAM",
+          "price_range": "MID",
+          "best_for": "COUPLES",
+          "summary": "Enjoy a unique experience watching classic films under the stars while sipping on cocktails at this rooftop cinema in Peckham."
+        },
+        "latency": 1.16,
+        "tokens": 308,
+        "calls": 1,
+        "issues": []
+      },
+      "multistage": {
+        "result": {
+          "category": "ACTIVITIES",
+          "neighborhood": "PECKHAM",
+          "price_range": "PREMIUM",
+          "best_for": "ANYONE",
+          "summary": "Experience a unique rooftop cinema in Peckham where you can enjoy classic films alongside premium cocktails, perfect for anyone looking for a memorable night out, though be prepared for a \u00a330 price tag."
+        },
+        "stages": {
+          "normalize": {
+            "title": "Rooftop cinema and cocktails in Peckham",
+            "body": "They show old movies on a rooftop and serve expensive cocktails. Is it worth \u00a330?",
+            "subreddit": "london",
+            "has_date": false,
+            "has_location": true,
+            "language": "en"
+          },
+          "classify": {
+            "category": "ACTIVITIES",
+            "neighborhood": "PECKHAM",
+            "price_range": "PREMIUM",
+            "best_for": "ANYONE"
+          },
+          "summarize": {
+            "summary": "Experience a unique rooftop cinema in Peckham where you can enjoy classic films alongside premium cocktails, perfect for anyone looking for a memorable night out, though be prepared for a \u00a330 price tag."
+          }
+        },
+        "latency": 4.5,
+        "tokens": 796,
+        "calls": 3,
+        "issues": []
+      }
+    },
+    {
+      "label": "Messy: multi-topic",
+      "input": "Subreddit: r/london\nTitle: Moving to London from NYC\nBody: Any tips? I work in finance and my office",
+      "monolithic": {
+        "result": {
+          "category": "UNCATEGORIZED",
+          "neighborhood": "UNKNOWN",
+          "price_range": "UNKNOWN",
+          "best_for": "ANYONE",
+          "summary": "Consider exploring neighborhoods like Canary Wharf for convenience, or nearby areas like Greenwich for a more relaxed vibe. For dining, try local eateries and markets to experience the diverse food scene."
+        },
+        "latency": 1.38,
+        "tokens": 337,
+        "calls": 1,
+        "issues": []
+      },
+      "multistage": {
+        "result": {
+          "category": "UNCATEGORIZED",
+          "neighborhood": "UNKNOWN",
+          "price_range": "BUDGET",
+          "best_for": "ANYONE",
+          "summary": "If you're moving to London for finance work in Canary Wharf, consider living in nearby neighborhoods like Isle of Dogs or Greenwich for convenience. For dining and weekend activities, explore local eateries and attractions in the area to make the most of your budget."
+        },
+        "stages": {
+          "normalize": {
+            "title": "Moving to London from NYC",
+            "body": "Any tips? I work in finance and my office is in Canary Wharf. Where should I live, where should I eat, what should I do on weekends? Budget around \u00a32000/month for rent.",
+            "subreddit": "london",
+            "has_date": false,
+            "has_location": true,
+            "language": "en"
+          },
+          "classify": {
+            "category": "UNCATEGORIZED",
+            "neighborhood": "UNKNOWN",
+            "price_range": "BUDGET",
+            "best_for": "ANYONE"
+          },
+          "summarize": {
+            "summary": "If you're moving to London for finance work in Canary Wharf, consider living in nearby neighborhoods like Isle of Dogs or Greenwich for convenience. For dining and weekend activities, explore local eateries and attractions in the area to make the most of your budget."
+          }
+        },
+        "latency": 3.43,
+        "tokens": 879,
+        "calls": 3,
+        "issues": []
+      }
+    },
+    {
+      "label": "Noisy: gibberish",
+      "input": "asdkjh askjdh 2k3j4h london food maybe???",
+      "monolithic": {
+        "result": {
+          "category": "FOOD_AND_DRINKS",
+          "neighborhood": "UNKNOWN",
+          "price_range": "UNKNOWN",
+          "best_for": "ANYONE",
+          "summary": "Explore the diverse food scene in London, offering a variety of cuisines to satisfy any palate."
+        },
+        "latency": 1.18,
+        "tokens": 278,
+        "calls": 1,
+        "issues": []
+      },
+      "multistage": {
+        "result": {
+          "category": "FOOD_AND_DRINKS",
+          "neighborhood": "UNKNOWN",
+          "price_range": "UNKNOWN",
+          "best_for": "ANYONE",
+          "summary": "Explore the diverse food scene in London, offering something for everyone, regardless of your taste or budget."
+        },
+        "stages": {
+          "normalize": {
+            "title": "london food maybe",
+            "body": "asdkjh askjdh 2k3j4h london food maybe???",
+            "subreddit": "food",
+            "has_date": false,
+            "has_location": true,
+            "language": "en"
+          },
+          "classify": {
+            "category": "FOOD_AND_DRINKS",
+            "neighborhood": "UNKNOWN",
+            "price_range": "UNKNOWN",
+            "best_for": "ANYONE"
+          },
+          "summarize": {
+            "summary": "Explore the diverse food scene in London, offering something for everyone, regardless of your taste or budget."
+          }
+        },
+        "latency": 3.49,
+        "tokens": 708,
+        "calls": 3,
+        "issues": []
+      }
+    },
+    {
+      "label": "Noisy: minimal",
+      "input": "london pubs",
+      "monolithic": {
+        "result": {
+          "category": "FOOD_AND_DRINKS",
+          "neighborhood": "UNKNOWN",
+          "price_range": "BUDGET",
+          "best_for": "FRIENDS",
+          "summary": "London pubs offer a great atmosphere for socializing with friends, enjoying a pint, and experiencing local culture."
+        },
+        "latency": 1.25,
+        "tokens": 270,
+        "calls": 1,
+        "issues": []
+      },
+      "multistage": {
+        "result": {
+          "category": "FOOD_AND_DRINKS",
+          "neighborhood": "UNKNOWN",
+          "price_range": "UNKNOWN",
+          "best_for": "ANYONE",
+          "summary": "Explore the vibrant pub scene in London, where you can find a variety of options suitable for anyone looking to enjoy a drink and soak in the local atmosphere."
+        },
+        "stages": {
+          "normalize": {
+            "title": "london pubs",
+            "body": "",
+            "subreddit": "",
+            "has_date": false,
+            "has_location": true,
+            "language": "en"
+          },
+          "classify": {
+            "category": "FOOD_AND_DRINKS",
+            "neighborhood": "UNKNOWN",
+            "price_range": "UNKNOWN",
+            "best_for": "ANYONE"
+          },
+          "summarize": {
+            "summary": "Explore the vibrant pub scene in London, where you can find a variety of options suitable for anyone looking to enjoy a drink and soak in the local atmosphere."
+          }
+        },
+        "latency": 3.13,
+        "tokens": 650,
+        "calls": 3,
+        "issues": []
+      }
+    }
+  ]
+}
