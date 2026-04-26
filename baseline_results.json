@@ -1,0 +1,75 @@
+{
+  "accuracy": "7/10",
+  "results": [
+    {
+      "example": 1,
+      "user_input": "Subreddit: r/london\nTitle: Some fun signs at the marathon today\nBody: \nFlair: No",
+      "expected": "ACTIVITIES",
+      "predicted": "UNCATEGORIZED",
+      "correct": false
+    },
+    {
+      "example": 2,
+      "user_input": "Subreddit: r/london\nTitle: London Marathon Images\nBody: This was my first time a",
+      "expected": "ACTIVITIES",
+      "predicted": "UNCATEGORIZED",
+      "correct": false
+    },
+    {
+      "example": 3,
+      "user_input": "Subreddit: r/LondonSocialClub\nTitle: [26/04/26] Surrey vs Essex Day 3 County Cri",
+      "expected": "ACTIVITIES",
+      "predicted": "ACTIVITIES",
+      "correct": true
+    },
+    {
+      "example": 4,
+      "user_input": "Subreddit: r/LondonSocialClub\nTitle: [10/05/26] 5-a-side football @ Paddington R",
+      "expected": "ACTIVITIES",
+      "predicted": "ACTIVITIES",
+      "correct": true
+    },
+    {
+      "example": 5,
+      "user_input": "Subreddit: r/LondonSocialClub\nTitle: [03/05/26] Fabric Saturday\nBody: Got 2 spar",
+      "expected": "ACTIVITIES",
+      "predicted": "ACTIVITIES",
+      "correct": true
+    },
+    {
+      "example": 6,
+      "user_input": "Subreddit: r/LondonSocialClub\nTitle: [25/04/2026] Bach's Mass at St Marylebone P",
+      "expected": "ACTIVITIES",
+      "predicted": "UNCATEGORIZED",
+      "correct": false
+    },
+    {
+      "example": 7,
+      "user_input": "Subreddit: r/LondonSocialClub\nTitle: [27/04/26] Book club meetup @ Waterstones P",
+      "expected": "ACTIVITIES",
+      "predicted": "ACTIVITIES",
+      "correct": true
+    },
+    {
+      "example": 8,
+      "user_input": "Subreddit: r/LondonSocialClub\nTitle: [02/05/26] Karaoke @ Lucky Voice Islington\n",
+      "expected": "ACTIVITIES",
+      "predicted": "ACTIVITIES",
+      "correct": true
+    },
+    {
+      "example": 9,
+      "user_input": "Subreddit: r/LondonSocialClub\nTitle: [01/05/26] V&A late night opening\nBody: The",
+      "expected": "ACTIVITIES",
+      "predicted": "ACTIVITIES",
+      "correct": true
+    },
+    {
+      "example": 10,
+      "user_input": "Subreddit: r/london\nTitle: Best brunch spots near Angel?\nBody: New to the area. ",
+      "expected": "FOOD_AND_DRINKS",
+      "predicted": "FOOD_AND_DRINKS",
+      "correct": true
+    }
+  ]
+}
