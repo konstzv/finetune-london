@@ -1,0 +1,254 @@
+{
+  "config": {
+    "cheap_model": "gpt-4o-mini",
+    "strong_model": "gpt-4o",
+    "confidence_threshold": 85
+  },
+  "summary": {
+    "total": 12,
+    "stayed_cheap": 9,
+    "escalated": 3,
+    "answer_changed": 0,
+    "total_cost": 0.001947,
+    "total_latency": 10.07
+  },
+  "results": [
+    {
+      "input": "Subreddit: r/london\nTitle: Best pizza in Soho?\nBody: Want proper Neapolitan pizz",
+      "category": "FOOD_AND_DRINKS",
+      "routed_to": "gpt-4o-mini",
+      "escalated": false,
+      "cheap": {
+        "model": "gpt-4o-mini",
+        "category": "FOOD_AND_DRINKS",
+        "confidence": 95,
+        "latency": 0.98,
+        "cost": 3.4e-05,
+        "raw": "{\"category\": \"FOOD_AND_DRINKS\", \"confidence\": 95}"
+      },
+      "strong": null,
+      "answer_changed": false,
+      "latency": 0.98,
+      "cost": 3.4e-05
+    },
+    {
+      "input": "Subreddit: r/LondonSocialClub\nTitle: [03/05/26] Pub quiz @ The Lamb\nBody: Weekly",
+      "category": "ACTIVITIES",
+      "routed_to": "gpt-4o-mini",
+      "escalated": false,
+      "cheap": {
+        "model": "gpt-4o-mini",
+        "category": "ACTIVITIES",
+        "confidence": 95,
+        "latency": 1.0,
+        "cost": 3.4e-05,
+        "raw": "{\"category\": \"ACTIVITIES\", \"confidence\": 95}"
+      },
+      "strong": null,
+      "answer_changed": false,
+      "latency": 1.0,
+      "cost": 3.4e-05
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: Hampstead Heath in autumn\nBody: The views from Parlia",
+      "category": "PLACES",
+      "routed_to": "gpt-4o-mini",
+      "escalated": false,
+      "cheap": {
+        "model": "gpt-4o-mini",
+        "category": "PLACES",
+        "confidence": 90,
+        "latency": 0.69,
+        "cost": 3.2e-05,
+        "raw": "{\"category\": \"PLACES\", \"confidence\": 90}"
+      },
+      "strong": null,
+      "answer_changed": false,
+      "latency": 0.69,
+      "cost": 3.2e-05
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: Is the Jubilee line always this packed?\nBody: Moved h",
+      "category": "UNCATEGORIZED",
+      "routed_to": "gpt-4o-mini",
+      "escalated": false,
+      "cheap": {
+        "model": "gpt-4o-mini",
+        "category": "UNCATEGORIZED",
+        "confidence": 85,
+        "latency": 0.54,
+        "cost": 3.3e-05,
+        "raw": "{\"category\": \"UNCATEGORIZED\", \"confidence\": 85}"
+      },
+      "strong": null,
+      "answer_changed": false,
+      "latency": 0.54,
+      "cost": 3.3e-05
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: Pub with board games?\nBody: Want somewhere to play ga",
+      "category": "FOOD_AND_DRINKS",
+      "routed_to": "gpt-4o-mini",
+      "escalated": false,
+      "cheap": {
+        "model": "gpt-4o-mini",
+        "category": "FOOD_AND_DRINKS",
+        "confidence": 90,
+        "latency": 0.65,
+        "cost": 3.4e-05,
+        "raw": "{\"category\": \"FOOD_AND_DRINKS\", \"confidence\": 90}"
+      },
+      "strong": null,
+      "answer_changed": false,
+      "latency": 0.65,
+      "cost": 3.4e-05
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: Brewery tour with live music\nBody: This place does to",
+      "category": "ACTIVITIES",
+      "routed_to": "gpt-4o-mini",
+      "escalated": false,
+      "cheap": {
+        "model": "gpt-4o-mini",
+        "category": "ACTIVITIES",
+        "confidence": 95,
+        "latency": 0.6,
+        "cost": 3.3e-05,
+        "raw": "{\"category\": \"ACTIVITIES\", \"confidence\": 95}"
+      },
+      "strong": null,
+      "answer_changed": false,
+      "latency": 0.6,
+      "cost": 3.3e-05
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: Rooftop cinema and cocktails\nBody: They show old movi",
+      "category": "ACTIVITIES",
+      "routed_to": "gpt-4o-mini",
+      "escalated": false,
+      "cheap": {
+        "model": "gpt-4o-mini",
+        "category": "ACTIVITIES",
+        "confidence": 85,
+        "latency": 0.57,
+        "cost": 3.4e-05,
+        "raw": "{\"category\": \"ACTIVITIES\", \"confidence\": 85}"
+      },
+      "strong": null,
+      "answer_changed": false,
+      "latency": 0.57,
+      "cost": 3.4e-05
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: Yoga in the park\nBody: Free yoga sessions at Regent's",
+      "category": "ACTIVITIES",
+      "routed_to": "gpt-4o-mini",
+      "escalated": false,
+      "cheap": {
+        "model": "gpt-4o-mini",
+        "category": "ACTIVITIES",
+        "confidence": 95,
+        "latency": 0.78,
+        "cost": 3.3e-05,
+        "raw": "{\"category\": \"ACTIVITIES\", \"confidence\": 95}"
+      },
+      "strong": null,
+      "answer_changed": false,
+      "latency": 0.78,
+      "cost": 3.3e-05
+    },
+    {
+      "input": "asdkjh askjdh 2k3j4h london food maybe???",
+      "category": "FOOD_AND_DRINKS",
+      "routed_to": "gpt-4o",
+      "escalated": true,
+      "cheap": {
+        "model": "gpt-4o-mini",
+        "category": "FOOD_AND_DRINKS",
+        "confidence": 70,
+        "latency": 0.67,
+        "cost": 3.2e-05,
+        "raw": "{\"category\": \"FOOD_AND_DRINKS\", \"confidence\": 70}"
+      },
+      "strong": {
+        "model": "gpt-4o",
+        "category": "FOOD_AND_DRINKS",
+        "confidence": 60,
+        "latency": 0.56,
+        "cost": 0.000527,
+        "raw": "{\"category\": \"FOOD_AND_DRINKS\", \"confidence\": 60}"
+      },
+      "answer_changed": false,
+      "latency": 1.23,
+      "cost": 0.000559
+    },
+    {
+      "input": "london",
+      "category": "UNCATEGORIZED",
+      "routed_to": "gpt-4o",
+      "escalated": true,
+      "cheap": {
+        "model": "gpt-4o-mini",
+        "category": "UNCATEGORIZED",
+        "confidence": 50,
+        "latency": 0.61,
+        "cost": 2.8e-05,
+        "raw": "{\"category\": \"UNCATEGORIZED\", \"confidence\": 50}"
+      },
+      "strong": {
+        "model": "gpt-4o",
+        "category": "UNCATEGORIZED",
+        "confidence": 60,
+        "latency": 0.55,
+        "cost": 0.00046,
+        "raw": "{\"category\": \"UNCATEGORIZED\", \"confidence\": 60}"
+      },
+      "answer_changed": false,
+      "latency": 1.16,
+      "cost": 0.000488
+    },
+    {
+      "input": "buy cheap viagra online best prices london pharmacy",
+      "category": "UNCATEGORIZED",
+      "routed_to": "gpt-4o-mini",
+      "escalated": false,
+      "cheap": {
+        "model": "gpt-4o-mini",
+        "category": "UNCATEGORIZED",
+        "confidence": 85,
+        "latency": 0.64,
+        "cost": 2.9e-05,
+        "raw": "{\"category\": \"UNCATEGORIZED\", \"confidence\": 85}"
+      },
+      "strong": null,
+      "answer_changed": false,
+      "latency": 0.64,
+      "cost": 2.9e-05
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: Moving to London from NYC\nBody: Any tips? I work in f",
+      "category": "UNCATEGORIZED",
+      "routed_to": "gpt-4o",
+      "escalated": true,
+      "cheap": {
+        "model": "gpt-4o-mini",
+        "category": "UNCATEGORIZED",
+        "confidence": 75,
+        "latency": 0.69,
+        "cost": 3.4e-05,
+        "raw": "{\"category\": \"UNCATEGORIZED\", \"confidence\": 75}"
+      },
+      "strong": {
+        "model": "gpt-4o",
+        "category": "UNCATEGORIZED",
+        "confidence": 70,
+        "latency": 0.54,
+        "cost": 0.00057,
+        "raw": "{\"category\": \"UNCATEGORIZED\", \"confidence\": 70}"
+      },
+      "answer_changed": false,
+      "latency": 1.23,
+      "cost": 0.000604
+    }
+  ]
+}
