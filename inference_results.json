@@ -1,0 +1,237 @@
+{
+  "summary": {
+    "total": 19,
+    "ok": 19,
+    "unsure": 0,
+    "fail": 0,
+    "redundancy_needed": 3,
+    "total_latency_s": 22.15,
+    "total_tokens": 3891
+  },
+  "clean": [
+    {
+      "input": "Subreddit: r/london\nTitle: Best pizza in Soho?\nBody: Want proper Neapolitan pizz",
+      "category": "FOOD_AND_DRINKS",
+      "status": "OK",
+      "confidence": 95,
+      "scoring_category": "FOOD_AND_DRINKS",
+      "redundancy": null,
+      "latency_s": 1.26,
+      "tokens": 174
+    },
+    {
+      "input": "Subreddit: r/LondonSocialClub\nTitle: [03/05/26] Pub quiz @ The Lamb\nBody: Weekly",
+      "category": "ACTIVITIES",
+      "status": "OK",
+      "confidence": 95,
+      "scoring_category": "ACTIVITIES",
+      "redundancy": null,
+      "latency_s": 0.68,
+      "tokens": 187
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: Hampstead Heath in autumn\nBody: The views from Parlia",
+      "category": "PLACES",
+      "status": "OK",
+      "confidence": 90,
+      "scoring_category": "PLACES",
+      "redundancy": null,
+      "latency_s": 0.56,
+      "tokens": 172
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: Is the Jubilee line always this packed?\nBody: Moved h",
+      "category": "UNCATEGORIZED",
+      "status": "OK",
+      "confidence": 85,
+      "scoring_category": "UNCATEGORIZED",
+      "redundancy": null,
+      "latency_s": 0.65,
+      "tokens": 175
+    }
+  ],
+  "borderline": [
+    {
+      "input": "Subreddit: r/london\nTitle: Pub with board games?\nBody: Want somewhere to play ga",
+      "category": "FOOD_AND_DRINKS",
+      "status": "OK",
+      "confidence": 90,
+      "scoring_category": "FOOD_AND_DRINKS",
+      "redundancy": null,
+      "latency_s": 0.72,
+      "tokens": 173
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: Street food at Victoria Park\nBody: The Sunday market ",
+      "category": "FOOD_AND_DRINKS",
+      "status": "OK",
+      "confidence": 90,
+      "scoring_category": "FOOD_AND_DRINKS",
+      "redundancy": null,
+      "latency_s": 0.76,
+      "tokens": 173
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: Open mic night at a cafe\nBody: This cafe does poetry ",
+      "category": "ACTIVITIES",
+      "status": "OK",
+      "confidence": 85,
+      "scoring_category": "ACTIVITIES",
+      "redundancy": null,
+      "latency_s": 1.67,
+      "tokens": 172
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: Walking tour of old pubs\nBody: Did a tour of historic",
+      "category": "ACTIVITIES",
+      "status": "OK",
+      "confidence": 85,
+      "scoring_category": "ACTIVITIES",
+      "redundancy": null,
+      "latency_s": 0.72,
+      "tokens": 180
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: Yoga in the park\nBody: Free yoga sessions at Regent's",
+      "category": "ACTIVITIES",
+      "status": "OK",
+      "confidence": 95,
+      "scoring_category": "ACTIVITIES",
+      "redundancy": null,
+      "latency_s": 0.83,
+      "tokens": 176
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: Brewery tour with live music\nBody: This place does to",
+      "category": "ACTIVITIES",
+      "status": "OK",
+      "confidence": 95,
+      "scoring_category": "ACTIVITIES",
+      "redundancy": null,
+      "latency_s": 0.64,
+      "tokens": 179
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: Rooftop cinema and cocktails\nBody: They show old movi",
+      "category": "ACTIVITIES",
+      "status": "OK",
+      "confidence": 85,
+      "scoring_category": "ACTIVITIES",
+      "redundancy": null,
+      "latency_s": 0.65,
+      "tokens": 182
+    }
+  ],
+  "noisy": [
+    {
+      "input": "asdkjh askjdh 2k3j4h london food maybe???",
+      "category": "FOOD_AND_DRINKS",
+      "status": "OK",
+      "confidence": 70,
+      "scoring_category": "FOOD_AND_DRINKS",
+      "redundancy": {
+        "answers": [
+          "FOOD_AND_DRINKS",
+          "FOOD_AND_DRINKS",
+          "FOOD_AND_DRINKS"
+        ],
+        "best": "FOOD_AND_DRINKS",
+        "agreement": 1.0,
+        "latency": 1.7198843955993652,
+        "tokens": 207
+      },
+      "latency_s": 2.75,
+      "tokens": 367
+    },
+    {
+      "input": "Title: \nBody: \nFlair: ",
+      "category": "UNCATEGORIZED",
+      "status": "OK",
+      "confidence": 100,
+      "scoring_category": "UNCATEGORIZED",
+      "redundancy": null,
+      "latency_s": 0.7,
+      "tokens": 150
+    },
+    {
+      "input": "Subreddit: r/cats\nTitle: My cat knocked over the Christmas tree again\nBody: Thir",
+      "category": "UNCATEGORIZED",
+      "status": "OK",
+      "confidence": 95,
+      "scoring_category": "UNCATEGORIZED",
+      "redundancy": null,
+      "latency_s": 0.72,
+      "tokens": 176
+    },
+    {
+      "input": "buy cheap viagra online best prices london pharmacy",
+      "category": "UNCATEGORIZED",
+      "status": "OK",
+      "confidence": 85,
+      "scoring_category": "UNCATEGORIZED",
+      "redundancy": null,
+      "latency_s": 0.75,
+      "tokens": 148
+    },
+    {
+      "input": "london",
+      "category": "UNCATEGORIZED",
+      "status": "OK",
+      "confidence": 50,
+      "scoring_category": "UNCATEGORIZED",
+      "redundancy": {
+        "answers": [
+          "UNCATEGORIZED",
+          "UNCATEGORIZED",
+          "UNCATEGORIZED"
+        ],
+        "best": "UNCATEGORIZED",
+        "agreement": 1.0,
+        "latency": 3.404086112976074,
+        "tokens": 153
+      },
+      "latency_s": 4.02,
+      "tokens": 295
+    },
+    {
+      "input": "\ud83d\udd25\ud83d\udd25\ud83d\udd25 BEST DEALS 50% OFF click here now!!!",
+      "category": "UNCATEGORIZED",
+      "status": "OK",
+      "confidence": 90,
+      "scoring_category": "UNCATEGORIZED",
+      "redundancy": null,
+      "latency_s": 0.65,
+      "tokens": 154
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: yes\nBody: no\nFlair: None",
+      "category": "UNCATEGORIZED",
+      "status": "OK",
+      "confidence": 95,
+      "scoring_category": "UNCATEGORIZED",
+      "redundancy": null,
+      "latency_s": 0.72,
+      "tokens": 159
+    },
+    {
+      "input": "Subreddit: r/london\nTitle: Moving to London from NYC\nBody: Any tips? I work in f",
+      "category": "UNCATEGORIZED",
+      "status": "OK",
+      "confidence": 75,
+      "scoring_category": "UNCATEGORIZED",
+      "redundancy": {
+        "answers": [
+          "UNCATEGORIZED",
+          "UNCATEGORIZED",
+          "UNCATEGORIZED"
+        ],
+        "best": "UNCATEGORIZED",
+        "agreement": 1.0,
+        "latency": 2.1110589504241943,
+        "tokens": 306
+      },
+      "latency_s": 2.7,
+      "tokens": 499
+    }
+  ]
+}
